@@ -14,6 +14,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     let imagePick = UIImagePickerController()
     var currentBtn: UIButton?
     
+    @IBOutlet weak var imgView: UIView!
     @IBOutlet weak var addImageBtn: UIButton!
     
     @IBOutlet weak var shareImageBtn: UIButton!
@@ -48,9 +49,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         }
  
     @IBAction func shareButton(_sender:UIButton){
-            
-        let imageShare = [imagePick]
-        let activityViewController = UIActivityViewController(activityItems: imageShare , applicationActivities: nil)
+    
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        let imageShare = [imgView.image]
+        let activityViewController = UIActivityViewController(activityItems: imageShare as [Any], applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController, animated: true, completion: nil)
         }

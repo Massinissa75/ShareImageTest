@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D508548D22BB8E3900C82723 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D508548C22BB8E3900C82723 /* UIView.swift */; };
 		D53F48E022B55AE70034C13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53F48DF22B55AE70034C13B /* AppDelegate.swift */; };
 		D53F48E222B55AE70034C13B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53F48E122B55AE70034C13B /* ViewController.swift */; };
 		D53F48E522B55AE70034C13B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53F48E322B55AE70034C13B /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D508548822BB8C6700C82723 /* ShareImageTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShareImageTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		D508548C22BB8E3900C82723 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D53F48DC22B55AE70034C13B /* ShareImageTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareImageTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53F48DF22B55AE70034C13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D53F48E122B55AE70034C13B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,12 +57,14 @@
 		D53F48DE22B55AE70034C13B /* ShareImageTest */ = {
 			isa = PBXGroup;
 			children = (
+				D508548C22BB8E3900C82723 /* UIView.swift */,
 				D53F48DF22B55AE70034C13B /* AppDelegate.swift */,
 				D53F48E122B55AE70034C13B /* ViewController.swift */,
 				D53F48E322B55AE70034C13B /* Main.storyboard */,
 				D53F48E622B55AE90034C13B /* Assets.xcassets */,
 				D53F48E822B55AE90034C13B /* LaunchScreen.storyboard */,
 				D53F48EB22B55AE90034C13B /* Info.plist */,
+				D508548822BB8C6700C82723 /* ShareImageTest-Bridging-Header.h */,
 			);
 			path = ShareImageTest;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 				TargetAttributes = {
 					D53F48DB22B55AE70034C13B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -136,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D53F48E222B55AE70034C13B /* ViewController.swift in Sources */,
+				D508548D22BB8E3900C82723 /* UIView.swift in Sources */,
 				D53F48E022B55AE70034C13B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P28Y39GE6C;
 				INFOPLIST_FILE = ShareImageTest/Info.plist;
@@ -291,6 +299,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.Massi.ShareImageTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShareImageTest/ShareImageTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P28Y39GE6C;
 				INFOPLIST_FILE = ShareImageTest/Info.plist;
@@ -309,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.Massi.ShareImageTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShareImageTest/ShareImageTest-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

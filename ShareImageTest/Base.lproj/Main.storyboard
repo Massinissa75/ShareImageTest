@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,26 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SY9-Cr-ECo">
-                                <rect key="frame" x="37.5" y="72" width="300" height="300"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck8-bt-Nj0">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
-                                        <state key="normal" title="Add Image">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="imagePickerWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HFl-7s-LNL"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="fwa-QR-l8n"/>
-                                    <constraint firstAttribute="width" constant="300" id="pfb-hU-23V"/>
-                                </constraints>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1s-Ig-MNm">
                                 <rect key="frame" x="87.5" y="561" width="200" height="50"/>
                                 <subviews>
@@ -57,23 +37,39 @@
                                     <constraint firstAttribute="height" constant="50" id="QYt-DW-CcJ"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tf0-xI-SDS">
+                                <rect key="frame" x="37" y="82" width="300" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szy-eX-7Vs">
+                                        <rect key="frame" x="8" y="0.0" width="284" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="add">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="imagePickerWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rgU-ZU-WPw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="t1s-Ig-MNm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5wV-KD-Buc"/>
-                            <constraint firstItem="SY9-Cr-ECo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9zK-p0-zgs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t1s-Ig-MNm" secondAttribute="bottom" constant="56" id="WYN-08-XBh"/>
-                            <constraint firstItem="SY9-Cr-ECo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="rX0-bp-HYq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="addImageBtn" destination="ck8-bt-Nj0" id="PJe-4I-sxQ"/>
+                        <outlet property="imgView" destination="tf0-xI-SDS" id="7jw-Ea-Ww5"/>
                         <outlet property="shareImageBtn" destination="X7H-wv-gzS" id="jqk-cS-cUB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>
